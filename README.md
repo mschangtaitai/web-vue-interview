@@ -37,7 +37,7 @@ You can use the previous image as a base for the UI.
 There are some extras that are optional in this excercise but will be a great addition to the application if they are implemented.
 
 ### CurrenciesView
-- You can group the currencies into the following groups and display the separately:
+- You can group the currencies into the following groups and display them separately:
     - Crypto currencies: The ones where decimal_digits > 2
     - Fiat currencies: The ones where decimal_digits = 2
 
