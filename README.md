@@ -28,9 +28,8 @@ The converter view currently is under construction and only the reactive propert
 https://fxratesapi.com/docs/endpoints/convert-currency
 
 <!-- ![Converterimage](https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png) -->
-<img class="h-[456px]"
-        src="https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png" />
-<!-- https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png -->
+<!-- <img class="h-[456px]" src="https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png" /> -->
+https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png
 
 
 You can use the previous image as a base for the UI.
