@@ -24,7 +24,7 @@ Your goal in this excercise is to finish completing the web application that is 
 
 
 ### ConverterView
-The converter view currently is under construction and only the reactive properties that are going toi be used in the view are going to be implemented. You neeed to create a converter of the currencies (the UI of the converter view does not need to be elegant only functional) using the API of FXRates.
+The converter view currently is under construction and only the reactive properties that are going to be used in the view are going to be implemented. You neeed to create a converter of the currencies (the UI of the converter view does not need to be elegant only functional) using the API of FXRates.
 https://fxratesapi.com/docs/endpoints/convert-currency
 
 <img class="h-[556px]" src="./public/currency-base-ui.png" />
