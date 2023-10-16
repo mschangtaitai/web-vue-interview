@@ -12,8 +12,8 @@
     <div>(Optional) also add a custom date option default is now</div>
     <div class="flex flex-row items-center justify-around">
       <div class="font-bold">You can take the following image as base</div>
-      <img class="h-[456px]"
-        src="https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png" />
+      <img class="h-[556px]"
+        src="https://mir-s3-cdn-cf.behance.net/projects/404/2b3f91152882841.Y3JvcCwxNjMwLDEyNzQsMCwxMg.png" />
     </div>
 
   </div>

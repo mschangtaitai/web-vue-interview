@@ -28,7 +28,7 @@ The converter view currently is under construction and only the reactive propert
 https://fxratesapi.com/docs/endpoints/convert-currency
 
 <!-- ![Converterimage](https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png) -->
-<img class="h-[456px]" src="./public/currency-base-ui.png" />
+<img class="h-[556px]" src="./public/currency-base-ui.png" />
 <!-- https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png -->
 
 
@@ -59,7 +59,15 @@ Instead of fetching the currencies all over again in the converter page implemen
  - List Rendering: https://vuejs.org/guide/essentials/list.html
  - Lifecycle Hooks: https://vuejs.org/guide/essentials/lifecycle.html
  - Computed properties: https://vuejs.org/guide/essentials/computed.html
+ - Setup; https://vuejs.org/api/composition-api-setup.html
 
 
  ## Vue Router
  - Named routes: https://router.vuejs.org/guide/essentials/named-routes.html
+
+ ## Js
+ - Object static methods: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods
+
+
+## Axios
+- Documentation: https://github.com/axios/axios
