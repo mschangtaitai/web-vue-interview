@@ -18,7 +18,7 @@ Your goal in this excercise is to finish completing the web application that is 
 ### CurrenciesView
 - Fix the commented line that pushes all the currencies into the currencies reactive property that makes the application crash.
 - Show a loader or a text that indicates that the view is loading while the call is done
-- Show a view if theere are no currencies
+- Show a view if there are no currencies
 - By using a computed property allow to filter the currencies by name or code case insensitive using the search reactive property.
 - Implement the fetch in the correct lifecycle hook of vuejs.
 
