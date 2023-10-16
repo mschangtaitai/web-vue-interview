@@ -27,9 +27,7 @@ Your goal in this excercise is to finish completing the web application that is 
 The converter view currently is under construction and only the reactive properties that are going toi be used in the view are going to be implemented. You neeed to create a converter of the currencies (the UI of the converter view does not need to be elegant only functional) using the API of FXRates.
 https://fxratesapi.com/docs/endpoints/convert-currency
 
-<!-- ![Converterimage](https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png) -->
 <img class="h-[556px]" src="./public/currency-base-ui.png" />
-<!-- https://s3-alpha.figma.com/hub/file/3130814970/2418519a-adc1-45b3-9af8-87d85d67a1bc-cover.png -->
 
 
 You can use the previous image as a base for the UI.
@@ -49,7 +47,7 @@ Add a Historic view implementing the following endpoint https://fxratesapi.com/d
 
 
 ### State management
-Instead of fetching the currencies all over again in the converter page implement state management framework like Pinia or Vuex to store the currencies avoiding to call the API twice.
+Instead of fetching the currencies all over again in the converter page implement Pinia to store the currencies avoiding to call the API twice.
 
 
 ## Material de apoyo
@@ -71,3 +69,6 @@ Instead of fetching the currencies all over again in the converter page implemen
 
 ## Axios
 - Documentation: https://github.com/axios/axios
+
+## Pinia
+- Documentation: https://pinia.vuejs.org/
