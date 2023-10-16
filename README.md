@@ -34,7 +34,7 @@ https://fxratesapi.com/docs/endpoints/convert-currency
 
 You can use the previous image as a base for the UI.
 
-### Extras
+## Extras
 
 There are some extras that are optional in this excercise but will be a great addition to the application if they are implemented.
 
@@ -50,3 +50,16 @@ Add a Historic view implementing the following endpoint https://fxratesapi.com/d
 
 ### State management
 Instead of fetching the currencies all over again in the converter page implement state management framework like Pinia or Vuex to store the currencies avoiding to call the API twice.
+
+
+## Material de apoyo
+
+## VueJS
+ - Conditional rendering: https://vuejs.org/guide/essentials/conditional.html
+ - List Rendering: https://vuejs.org/guide/essentials/list.html
+ - Lifecycle Hooks: https://vuejs.org/guide/essentials/lifecycle.html
+ - Computed properties: https://vuejs.org/guide/essentials/computed.html
+
+
+ ## Vue Router
+ - Named routes: https://router.vuejs.org/guide/essentials/named-routes.html
