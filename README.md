@@ -50,7 +50,7 @@ Add a Historic view implementing the following endpoint https://fxratesapi.com/d
 Instead of fetching the currencies all over again in the converter page implement Pinia to store the currencies avoiding to call the API twice.
 
 
-## Material de apoyo
+## Helpers
 
 ## VueJS
  - Conditional rendering: https://vuejs.org/guide/essentials/conditional.html
