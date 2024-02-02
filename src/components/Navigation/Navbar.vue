@@ -18,8 +18,10 @@
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- TODO better way to implement this to have the code easier to read -->
-            <NavLink to="/currencies">Curriencies</NavLink>
-            <NavLink to="/converter">Converter</NavLink>
+            <li v-for="direction in directions">
+              <NavLink type="mobile" to="direction.path">{{ direction.title }}</NavLink>
+            </li>
+
 
 
 

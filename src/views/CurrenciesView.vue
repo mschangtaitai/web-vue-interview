@@ -41,16 +41,22 @@ import { computed, onMounted, reactive, ref } from "vue";
 const axios = useAxios()
 const currencies = reactive([])
 const search = ref("")
-const getCurrencies = async () => {
+const getCurrencies = onMounted(async () => {
   try {
     const response = await axios.get("/currencies")
     const data = response.data
+    // console.log(data)
+    for (const currency in data) {
+      console.log(currency)
+      currencies.push({ currency: data[currency] });
+    }
+    console.log(currencies)
     //TODO This line contains an error fix it to show all the cards
     // currencies.push(...data)
   } catch (error) {
 
   }
-}
+})
 //TODO implement with a computed property a filter with the search value to check if the string is the name or the code case insensitive
 
 //TODO (Extra) based on the decimal_digits group the ones with the value 2 as non crypto currencies and the ones with > 2 as crypto
