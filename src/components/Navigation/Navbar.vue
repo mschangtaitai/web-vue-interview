@@ -16,16 +16,11 @@
           <div class="flex flex-shrink-0 items-center">
             <div class="font-bold text-indigo-800 text-lg">FTX-Test</div>
           </div>
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <!-- TODO better way to implement this to have the code easier to read -->
-            <li v-for="direction in directions">
-              <NavLink type="mobile" to="direction.path">{{ direction.title }}</NavLink>
-            </li>
 
-
-
-
-          </div>
+          <!-- TODO better way to implement this to have the code easier to read -->
+          <ul v-for="direction in directions" class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <NavLink :to="direction.path">{{ direction.title }}</NavLink>
+          </ul>
         </div>
 
       </div>

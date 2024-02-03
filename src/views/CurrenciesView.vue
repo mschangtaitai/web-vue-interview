@@ -26,8 +26,16 @@
       </div>
       <!-- TODO: Show a loader or a text that indicates that the view is loading while the call is done -->
       <!-- TODO: Show a view if theere are no currencies -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-8">
-        <CurrencyCard v-for="currency in currencies" :key="currency.code" :currency="currency" />
+      <div v-if="isLoading">
+        Loading...
+      </div>
+      <div v-if="filteredCurrencies.length > 0"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-8">
+        <CurrencyCard v-for="currency in filteredCurrencies" :key="currency.code" :currency="currency" />
+      </div>
+
+      <div v-else>
+        I'm sorry, there are no currencies :(
       </div>
     </div>
   </main>
@@ -37,26 +45,36 @@ import useAxios from "@/composables/useAxios.js"
 import CurrencyCard from "@/components/currencies/CurrencyCard.vue";
 import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
-import { computed, onMounted, reactive, ref } from "vue";
+import { computed, onMounted, reactive, ref, defineModel } from "vue";
 const axios = useAxios()
 const currencies = reactive([])
 const search = ref("")
+const isLoading = ref(true)
 const getCurrencies = onMounted(async () => {
   try {
     const response = await axios.get("/currencies")
     const data = response.data
     // console.log(data)
     for (const currency in data) {
-      console.log(currency)
-      currencies.push({ currency: data[currency] });
+      console.log(data[currency])
+      currencies.push(data[currency]);
     }
     console.log(currencies)
     //TODO This line contains an error fix it to show all the cards
     // currencies.push(...data)
+    isLoading.value = false
   } catch (error) {
-
+    isLoading.value = false
   }
 })
+
+const filteredCurrencies = computed(() => {
+  console.log(search)
+  const filtered = currencies.filter(currency => currency.name.toLowerCase().includes(search.value.toLowerCase()) || currency.code.toLowerCase().includes(search.value.toLowerCase()))
+  // const filtered = "Test filter " + search.value
+  return filtered
+})
+
 //TODO implement with a computed property a filter with the search value to check if the string is the name or the code case insensitive
 
 //TODO (Extra) based on the decimal_digits group the ones with the value 2 as non crypto currencies and the ones with > 2 as crypto
