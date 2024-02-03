@@ -29,13 +29,23 @@
       <div v-if="isLoading">
         Loading...
       </div>
-      <div v-if="filteredCurrencies.length > 0"
+      <div class="font-bold bg-blue-600 text-white px-4 py-6 text-xl">Crypto</div>
+      <div v-if="filteredCurrenciesCrypto.length > 0"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-8">
-        <CurrencyCard v-for="currency in filteredCurrencies" :key="currency.code" :currency="currency" />
+        <CurrencyCard v-for="currency in filteredCurrenciesCrypto" :key="currency.code" :currency="currency" />
       </div>
 
       <div v-else>
-        I'm sorry, there are no currencies :(
+        I'm sorry, there are no Crypto currencies :(
+      </div>
+      <div class="font-bold bg-blue-600 text-white px-4 py-6 text-xl">Fiat</div>
+      <div v-if="filteredCurrenciesFiat.length > 0"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 mt-8">
+        <CurrencyCard v-for="currency in filteredCurrenciesFiat" :key="currency.code" :currency="currency" />
+      </div>
+
+      <div v-else>
+        I'm sorry, there are no Fiat currencies :(
       </div>
     </div>
   </main>
@@ -68,9 +78,16 @@ const getCurrencies = onMounted(async () => {
   }
 })
 
-const filteredCurrencies = computed(() => {
+const filteredCurrenciesCrypto = computed(() => {
   console.log(search)
-  const filtered = currencies.filter(currency => currency.name.toLowerCase().includes(search.value.toLowerCase()) || currency.code.toLowerCase().includes(search.value.toLowerCase()))
+  const filtered = currencies.filter(currency => (currency.name.toLowerCase().includes(search.value.toLowerCase()) || currency.code.toLowerCase().includes(search.value.toLowerCase())) && currency.decimal_digits > 2)
+  // const filtered = "Test filter " + search.value
+  return filtered
+})
+
+const filteredCurrenciesFiat = computed(() => {
+  console.log(search)
+  const filtered = currencies.filter(currency => (currency.name.toLowerCase().includes(search.value.toLowerCase()) || currency.code.toLowerCase().includes(search.value.toLowerCase())) && currency.decimal_digits === 2)
   // const filtered = "Test filter " + search.value
   return filtered
 })
